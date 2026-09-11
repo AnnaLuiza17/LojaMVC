@@ -83,13 +83,13 @@ A interface foi desenvolvida utilizando:
 
 ## Gerenciamento de Produtos
 
-![Produtos](LojaMVC/produto.png.png)
+![Produtos](LojaMVC/produtos.png.png)
 
 ---
 
 ## Gerenciamento de Clientes
 
-![Clientes](LojaMVC/cliente.png.png)
+![Clientes](LojaMVC/clientes.png.png)
 
 # ▶️ Como Executar o Projeto
 
