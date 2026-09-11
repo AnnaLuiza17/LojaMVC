@@ -73,23 +73,23 @@ A interface foi desenvolvida utilizando:
 
 ## Cadastro / Login
 
-![Login](LojaMVC/login.png.png)
+![Login](LojaMVC/Imagens/login.png.png)
 
 ---
 
-![Cadastro](LojaMVC/cadastro.png.png)
+![Cadastro](LojaMVC/Imagens/cadastro.png.png)
 
 ---
 
 ## Gerenciamento de Produtos
 
-![Produtos](LojaMVC/produtos.png.png)
+![Produtos](LojaMVC/Imagens/produtos.png.png)
 
 ---
 
 ## Gerenciamento de Clientes
 
-![Clientes](LojaMVC/clientes.png.png)
+![Clientes](LojaMVC/Imagens/clientes.png.png)
 
 # ▶️ Como Executar o Projeto
 
