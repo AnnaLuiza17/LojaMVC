@@ -67,7 +67,7 @@ A interface foi desenvolvida utilizando:
 
 ## Tela Inicial
 
-![Tela Inicial](LojaMVC/pagina-inicial.png.png)
+![Tela Inicial](LojaMVC/Imagens/pagina-inicial.png.png)
 
 ---
 
