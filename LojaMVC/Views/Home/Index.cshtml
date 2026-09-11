@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<style>
+    .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        border-radius: 24px;
+        color: white;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-content {
+        max-width: 750px;
+        text-align: center;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-bottom: 20px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 0.9rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-weight: 800;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+    }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+    .hero p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        color: #dbeafe;
+        margin-bottom: 32px;
+    }
+
+    .hero-button {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 12px;
+        background: #3b82f6;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.25s ease;
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+    }
+
+        .hero-button:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.45);
+        }
+
+    .tech-card {
+        margin-top: 35px;
+        padding: 20px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.95rem;
+        color: #bfdbfe;
+    }
+</style>
+
+<div class="hero">
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            ASP.NET Core
+        </div>
+
+        <h1>
+            Welcome to <span>your app.</span>
+        </h1>
+
+        <p>
+            Build fast, modern and powerful web applications
+            with ASP.NET Core.
+        </p>
+
+        <a class="hero-button"
+           href="https://learn.microsoft.com/aspnet/core"
+           target="_blank"
+           rel="noopener noreferrer">
+            Learn ASP.NET Core →
+        </a>
+
+        <div class="tech-card">
+            🚀 A clean starting point for your next web project.
+        </div>
+
+    </div>
+</div>

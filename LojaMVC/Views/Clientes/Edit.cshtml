@@ -1,0 +1,156 @@
+﻿@model LojaMVC.Models.Cliente
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+    .edit-container {
+        max-width: 650px;
+        margin: 40px auto;
+    }
+
+    .edit-card {
+        padding: 35px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .edit-title {
+        color: #1e3a8a;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .edit-subtitle {
+        color: #64748b;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .control-label {
+        color: #334155;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 10px 14px;
+        border: 1px solid #cbd5e1;
+        transition: 0.2s;
+    }
+
+        .form-control:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+    .form-check {
+        padding: 10px 0;
+    }
+
+    .form-check-label {
+        color: #334155;
+        font-weight: 500;
+    }
+
+    .btn-primary {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 11px;
+        font-weight: 600;
+        background: #2563eb;
+        transition: 0.2s;
+    }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+<div class="edit-container">
+    <div class="edit-card">
+
+        <h1 class="edit-title">@ViewData["Title"]</h1>
+
+        <h4 class="edit-subtitle">Cliente</h4>
+        <hr />
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <form asp-action="Edit">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" placeholder="Digite o nome" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Digite o e-mail" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Idade" class="control-label"></label>
+                        <input asp-for="Idade" class="form-control" placeholder="Digite a idade" />
+                        <span asp-validation-for="Idade" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Ativo" />
+                            @Html.DisplayNameFor(model => model.Ativo)
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit"
+                               value="Save"
+                               class="btn btn-primary" />
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index" class="back-link">
+                ← Back to List
+            </a>
+        </div>
+
+    </div>
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

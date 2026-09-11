@@ -1,0 +1,149 @@
+﻿@model LojaMVC.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<style>
+    .delete-container {
+        max-width: 700px;
+        margin: 40px auto;
+    }
+
+    .delete-card {
+        padding: 35px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #fee2e2;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .delete-title {
+        color: #991b1b;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .delete-warning {
+        color: #64748b;
+        margin-bottom: 25px;
+    }
+
+    .delete-card h4 {
+        color: #334155;
+        font-weight: 600;
+    }
+
+    .delete-card hr {
+        margin-bottom: 25px;
+    }
+
+    .client-info {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+        .client-info dt {
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .client-info dd {
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+    .btn-danger {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-weight: 600;
+        background: #dc2626;
+        transition: 0.2s;
+    }
+
+        .btn-danger:hover {
+            background: #b91c1c;
+            transform: translateY(-1px);
+        }
+
+    .back-link {
+        margin-left: 8px;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+<div class="delete-container">
+    <div class="delete-card">
+
+        <h1 class="delete-title">@ViewData["Title"]</h1>
+
+        <h3 class="delete-warning">
+            ⚠️ Are you sure you want to delete this?
+        </h3>
+
+        <div>
+            <h4>Cliente</h4>
+            <hr />
+
+            <dl class="row client-info">
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Idade)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Idade)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Ativo)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Ativo)
+                </dd>
+
+            </dl>
+
+            <form asp-action="Delete">
+
+                <input type="hidden" asp-for="Id" />
+
+                <input type="submit"
+                       value="Delete"
+                       class="btn btn-danger" />
+
+                <span>|</span>
+
+                <a asp-action="Index" class="back-link">
+                    Back to List
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

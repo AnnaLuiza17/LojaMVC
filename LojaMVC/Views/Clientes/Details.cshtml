@@ -1,0 +1,143 @@
+﻿@model LojaMVC.Models.Cliente
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    .details-container {
+        max-width: 700px;
+        margin: 40px auto;
+    }
+
+    .details-card {
+        padding: 35px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .details-title {
+        color: #1e3a8a;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .details-subtitle {
+        color: #64748b;
+        margin-bottom: 10px;
+    }
+
+    .details-card hr {
+        margin-bottom: 25px;
+    }
+
+    .client-info {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+        .client-info dt {
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .client-info dd {
+            color: #1e293b;
+            margin-bottom: 18px;
+        }
+
+    .btn-edit {
+        display: inline-block;
+        padding: 9px 20px;
+        border-radius: 9px;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+        .btn-edit:hover {
+            background: #1d4ed8;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+    .back-link {
+        margin-left: 8px;
+        color: #64748b;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .back-link:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+</style>
+<div class="details-container">
+    <div class="details-card">
+
+        <h1 class="details-title">@ViewData["Title"]</h1>
+
+        <h4 class="details-subtitle">Cliente</h4>
+        <hr />
+
+        <div>
+
+            <dl class="row client-info">
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Idade)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Idade)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Ativo)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Ativo)
+                </dd>
+
+            </dl>
+
+        </div>
+
+        <div>
+            <a asp-action="Edit"
+               asp-route-id="@Model?.Id"
+               class="btn-edit">
+                Edit
+            </a>
+
+            <span>|</span>
+
+            <a asp-action="Index" class="back-link">
+                Back to List
+            </a>
+        </div>
+
+    </div>
+
+</div>

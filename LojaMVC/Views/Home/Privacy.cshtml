@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<style>
+    .privacy-page {
+        min-height: 80vh;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        border-radius: 24px;
+        color: #f8fafc;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .privacy-container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .privacy-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-bottom: 18px;
+        border-radius: 999px;
+        background: rgba(96, 165, 250, 0.12);
+        border: 1px solid rgba(96, 165, 250, 0.25);
+        color: #93c5fd;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .privacy-page h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        margin-bottom: 20px;
+    }
+
+        .privacy-page h1 span {
+            color: #60a5fa;
+        }
+
+    .privacy-intro {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #cbd5e1;
+        margin-bottom: 35px;
+    }
+
+    .privacy-card {
+        padding: 28px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        margin-bottom: 20px;
+    }
+
+        .privacy-card h2 {
+            margin-bottom: 12px;
+            color: #93c5fd;
+            font-size: 1.3rem;
+        }
+
+        .privacy-card p {
+            margin: 0;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+    .privacy-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+</style>
+<div class="privacy-page">
+    <div class="privacy-container">
+        <div class="privacy-badge">
+            🔒 Privacy
+        </div>
+
+        <h1>
+            @ViewData["Title"] <span>.</span>
+        </h1>
+
+        <p class="privacy-intro">
+            Sua privacidade é importante para nós. Nesta página você
+            encontrará informações sobre como os dados utilizados pelo
+            site são tratados e protegidos.
+        </p>
+
+        <div class="privacy-card">
+            <div class="privacy-icon">🛡️</div>
+            <h2>Proteção de dados</h2>
+            <p>
+                Trabalhamos para manter suas informações protegidas
+                e utilizamos boas práticas de segurança para reduzir
+                riscos de acesso não autorizado.
+            </p>
+        </div>
+
+        <div class="privacy-card">
+            <div class="privacy-icon">📋</div>
+            <h2>Uso das informações</h2>
+            <p>
+                As informações coletadas são utilizadas somente quando
+                necessárias para oferecer, manter e melhorar os serviços
+                disponibilizados pelo site.
+            </p>
+        </div>
+
+        <div class="privacy-card">
+            <div class="privacy-icon">🔐</div>
+            <h2>Seu controle</h2>
+            <p>
+                Caso tenha dúvidas sobre o tratamento de informações ou
+                queira obter mais detalhes sobre esta política, entre
+                em contato com os responsáveis pelo site.
+            </p>
+        </div>
+
+    </div>
+
+</div>

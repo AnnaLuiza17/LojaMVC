@@ -1,0 +1,144 @@
+﻿@page
+@model LogoutModel
+
+@{
+    ViewData["Title"] = "Sair";
+}
+
+<style>
+    .logout-container {
+        max-width: 500px;
+        margin: 50px auto;
+    }
+
+    .logout-card {
+        padding: 35px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        text-align: center;
+    }
+
+    .logout-icon {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #eff6ff;
+        color: #2563eb;
+        font-size: 28px;
+    }
+
+    .logout-title {
+        color: #1e3a8a;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .logout-text {
+        color: #64748b;
+        margin-bottom: 25px;
+    }
+
+    .btn-logout {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 11px;
+        font-weight: 600;
+        background: #dc2626;
+        color: white;
+        transition: 0.2s;
+    }
+
+        .btn-logout:hover {
+            background: #b91c1c;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+    .home-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+    .success-message {
+        color: #334155;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="logout-container">
+
+    <div class="logout-card">
+
+        <div class="logout-icon">
+            🚪
+        </div>
+
+        <h1 class="logout-title">
+            @ViewData["Title"]
+        </h1>
+
+        @{
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                <p class="logout-text">
+                    Tem certeza de que deseja sair da sua conta?
+                </p>
+
+                <form class="form-inline"
+                      asp-area="Identity"
+                      asp-page="/Account/Logout"
+                      asp-route-returnUrl="@Url.Page("/", new { area = "" })"
+                      method="post">
+
+                    <button type="submit"
+                            class="btn btn-logout">
+
+                        Sair da conta
+
+                    </button>
+
+                </form>
+
+                <a asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index"
+                   class="home-link">
+
+                    ← Voltar para o início
+
+                </a>
+            }
+            else
+            {
+                <p class="success-message">
+                    Você saiu da aplicação com sucesso.
+                </p>
+
+                <a asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index"
+                   class="home-link">
+
+                    ← Voltar para o início
+
+                </a>
+            }
+        }
+
+    </div>
+
+</div>
