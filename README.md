@@ -67,29 +67,29 @@ A interface foi desenvolvida utilizando:
 
 ## Tela Inicial
 
-![Tela Inicial](LojaMVC/pagina-inicial.png)
+![Tela Inicial](LojaMVC/pagina-inicial.png.png)
 
 ---
 
 ## Cadastro / Login
 
-![Login](LojaMVC/login.png)
+![Login](LojaMVC/login.png.png)
 
 ---
 
-![Cadastro](LojaMVC/cadastro.png)
+![Cadastro](LojaMVC/cadastro.png.png)
 
 ---
 
 ## Gerenciamento de Produtos
 
-![Produtos](LojaMVC/produto.png)
+![Produtos](LojaMVC/produto.png.png)
 
 ---
 
 ## Gerenciamento de Clientes
 
-![Clientes](LojaMVC/cliente.png)
+![Clientes](LojaMVC/cliente.png.png)
 
 # ▶️ Como Executar o Projeto
 
